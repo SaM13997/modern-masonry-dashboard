@@ -1,81 +1,122 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+import Icon from 'astro-icon'
+
+const img =
+	'https://images.unsplash.com/photo-1681405203174-240c946cf06e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80'
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<Layout title="Masonry Dashboard">
+	<div class="parent w-full flex justify-center items-center gap-2 h-[95vh]">
+		<div
+			class="left flex flex-col justify-center items-center w-[49%] gap-2 h-full"
+		>
+			<div
+				class="top h-[35%] bg-blue-600 rounded-[2rem] w-full p-6 flex flex-col justify-end"
+			>
+				<div
+					class="flex items-center justify-center gap-2 px-4 py-2 mb-1 rounded-full tag bg-slate-50 w-max"
+				>
+					<Icon pack="mdi" name="star" class="w-4" />
+					Machine Statistics
+				</div>
+				<div class="wrapper rounded-full border border-white p-[2px]">
+					<div
+						class="p-2 px-4 font-bold text-white border-white rounded-full inner bg-slate-50/60 text-l"
+					>
+						<p class="mt-[-2px]">Simulation energy position</p>
+					</div>
+				</div>
+			</div>
+			<div
+				class="bottom p-7 h-[65%] rounded-[2rem] w-full bg-slate-50 flex flex-col justify-between"
+			>
+				<div class="mt-[-1.5rem]">
+					<p class="heading text-[4rem] font-semibold">Innovation</p>
+					<div
+						class="p-1 px-10 text-white uppercase bg-black rounded-full tag w-max"
+					>
+						Statistics
+					</div>
+				</div>
+				<div class="w-full loaders">
+					<div class="w-full mb-1 bg-gray-300 rounded-full bar">
+						<div class="filled bg-black h-10 w-[60%] rounded-full">.</div>
+					</div>
+					<div class="w-full bg-gray-300 rounded-full bar">
+						<div
+							class="filled bg-black w-[90%] h-10 rounded-full text-white flex justify-end items-center pr-4"
+						>
+							+30%
+						</div>
+					</div>
+				</div>
+				<div class="text-2xl font-bold">
+					<p>
+						<span class="underline">Software</span>
+						<span class="">with</span><span class="text-gray-400">
+							future design</span
+						> technology
+					</p>
+					<p>
+						<span class="text-gray-400">boundless</span> innovation and experience.
+					</p>
+				</div>
+				<div class="cta">
+					<div class="flex items-center justify-center gap-1">
+						<div class="flex-1 p-4 border-2 border-black rounded-3xl">
+							<div
+								class="flex items-center justify-between pt-12 border-b-2 border-b-black"
+							>
+								<p>Get Started</p>
+								<Icon pack="ic" name="round-north-east" class="w-4" />
+							</div>
+						</div>
+						<div class="flex-1 p-4 border-2 border-black rounded-3xl">
+							<div
+								class="flex items-center justify-between pt-12 border-b-2 border-b-black"
+							>
+								<p>Pricing</p>
+								<Icon pack="ic" name="round-north-east" class="w-4" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="right rounded-[2rem] bg-black text-white h-full w-[49%]">
+			<div class="top">
+				<div class="flex items-center justify-center">
+					<div class="p-[2px] border flex-1 border-white rounded-full">
+						<div
+							class="flex items-center justify-between p-1 px-2 border border-white rounded-full bg-slate-50/20"
+						>
+							<p>Navigation menu</p>
+							<Icon pack="ic" name="round-north-east" class="w-4" />
+						</div>
+					</div>
+					<div class="p-[11px] border border-white rounded-full twitter">
+						<Icon pack="mdi" name="twitter" class="w-4" />
+					</div>
+					<div class="p-[11px] border border-white rounded-full twitter">
+						<Icon pack="mdi" name="github" class="w-4" />
+					</div>
+					<div class="p-[11px] border border-white rounded-full twitter">
+						<Icon pack="mdi" name="instagram" class="w-4" />
+					</div>
+				</div>
+			</div>
+			<div class="mid"></div>
+			<div class="bottom"></div>
+		</div>
+	</div>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+	<style lang="scss">
+		.left .top {
+			background: url('https://images.unsplash.com/photo-1680810094604-cd68532ebc56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80')
+				no-repeat center center;
+			background-size: cover;
+		}
+	</style>
+</Layout>
