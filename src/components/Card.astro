@@ -1,11 +1,72 @@
 ---
-export interface Props {
-	title: string
-	body: string
-	href: string
-}
+import { Icon } from 'astro-icon'
 
-const { href, title, body } = Astro.props
+const { title, bgColor, subtext, number, percent, white } = Astro.props
 ---
 
-<style lang="scss"></style>
+<div
+	class="rounded-[2rem] w-full h-full flex flex-col justify-between items-center bgColor px-4 py-6"
+>
+	<div class="flex items-center justify-between w-full">
+		<div
+			class="px-8 font-bold uppercase rounded-full tag w-max"
+			style={{
+				color: white ? 'black' : 'white',
+				backgroundColor: white ? 'white' : 'black',
+			}}
+		>
+			{title}
+		</div>
+		<Icon
+			pack="ic"
+			name="round-north-east"
+			class="w-6"
+			style={{
+				color: white ? 'white' : 'black',
+			}}
+		/>
+	</div>
+	<div class="flex flex-col items-center justify-center w-full">
+		<div class="flex items-center justify-between w-full">
+			<div
+				class="w-[50%] text-[1.4rem] font-semibold"
+				style={{
+					color: white ? 'white' : 'black',
+				}}
+			>
+				{subtext}
+			</div>
+			<div
+				class="w-[50%] text-2rem text-right text-[3rem]"
+				style={{
+					color: white ? 'white' : 'black',
+				}}
+			>
+				{number}
+			</div>
+		</div>
+		<div
+			class="w-full mb-1 rounded-full"
+			style={{
+				backgroundColor: white ? 'rgb(209 213 219 / 0.5)' : 'rgb(3 7 18 / 0.2)',
+			}}
+		>
+			<div
+				class="h-4 rounded-full filled loaderSize"
+				style={{
+					backgroundColor: white ? 'white' : 'black',
+				}}
+			>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style lang="scss" define:vars={{ bgColor, percent, white }}>
+	.bgColor {
+		background-color: var(--bgColor);
+	}
+	.loaderSize {
+		width: var(--percent);
+	}
+</style>
