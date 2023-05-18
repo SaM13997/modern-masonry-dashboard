@@ -8,9 +8,11 @@ const img =
 ---
 
 <Layout title="Masonry Dashboard">
-	<div class="parent w-full flex justify-center items-center gap-2 h-[95vh]">
+	<div
+		class="parent w-full flex xl:flex-row justify-center items-center gap-6 xl:h-[95dvh] flex-col-reverse px-6 mt-5"
+	>
 		<div
-			class="left flex flex-col justify-center items-center w-[49%] gap-2 h-full"
+			class="left flex flex-col justify-center items-center xl:w-[49%] w-full gap-2 h-full"
 		>
 			<div
 				class="top h-[35%] bg-blue-600 rounded-[2rem] w-full p-6 flex flex-col justify-end"
@@ -86,10 +88,10 @@ const img =
 			</div>
 		</div>
 		<div
-			class="right rounded-[2rem] text-white h-full flex flex-col items-center justify-center w-[49%]"
+			class="right gap-10 rounded-[2rem] text-white flex xl:flex-col flex-col items-center xl:justify-center xl:w-[49%] xl:h-full"
 		>
 			<div
-				class="top h-[35%] w-full flex items-center justify-between flex-col"
+				class="top xl:h-[35%] h-full w-full flex items-center justify-between flex-col"
 			>
 				<div class="flex items-center justify-center w-full">
 					<div class="p-[2px] border flex-1 border-white rounded-full">
@@ -138,7 +140,7 @@ const img =
 				</div>
 			</div>
 			<div
-				class="bottom h-[65%] w-full flex flex-col justify-center items-center gap-1"
+				class="bottom xl:h-[65%] h-full w-full flex flex-col justify-center items-center gap-1"
 			>
 				<div class="h-[50%] w-full flex justify-center items-center gap-1">
 					<Card
@@ -193,6 +195,17 @@ const img =
 			background: url('https://images.unsplash.com/photo-1680810094604-cd68532ebc56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80')
 				no-repeat center center;
 			background-size: cover;
+		}
+
+		.parent {
+			outline: red solid 2px;
+		}
+
+		@media only screen and (max-width: 640px) {
+			.parent {
+				// display: block !important;
+				outline: blue solid 2px;
+			}
 		}
 	</style>
 </Layout>
