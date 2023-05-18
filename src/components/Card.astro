@@ -27,22 +27,22 @@ const { title, bgColor, subtext, number, percent, white } = Astro.props
 		/>
 	</div>
 	<div class="flex flex-col items-center justify-center w-full">
-		<div class="flex items-center justify-between w-full">
+		<div class="flex items-center justify-between w-full pb-1">
 			<div
-				class="w-[50%] xl:text-[1.4rem] font-semibold"
+				class="w-[70%]"
 				style={{
 					color: white ? 'white' : 'black',
 				}}
 			>
-				{subtext}
+				<p class="xl:text-[1.4rem ] text-xl font-semibold">{subtext}</p>
 			</div>
 			<div
-				class="w-[50%] xl:text-2rem text-right"
+				class="w-[30%]"
 				style={{
 					color: white ? 'white' : 'black',
 				}}
 			>
-				{number}
+				<p class="xl:text-2rem text-2xl text-right">{number}</p>
 			</div>
 		</div>
 		<div
