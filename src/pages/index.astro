@@ -9,13 +9,13 @@ const img =
 
 <Layout title="Masonry Dashboard">
 	<div
-		class="parent w-full flex xl:flex-row justify-center items-center gap-6 xl:h-[95dvh] flex-col-reverse xl:px-6 px-2 my-5"
+		class="parent w-full flex md:flex-row justify-center items-center gap-6 md:h-[95dvh] flex-col-reverse xl:px-6 px-2 my-5"
 	>
 		<div
 			class="left flex flex-col justify-center items-center xl:w-[49%] w-full gap-2 h-full"
 		>
 			<div
-				class="top xl:h-[35%] h-[200px] bg-blue-600 rounded-[2rem] w-full xl:p-6 p-3 flex flex-col justify-end"
+				class="top md:h-[35%] h-[200px] bg-blue-600 rounded-[2rem] w-full xl:p-6 p-3 flex flex-col justify-end"
 			>
 				<div
 					class="flex items-center justify-center gap-2 px-4 py-2 mb-1 rounded-full tag bg-slate-50 w-max"
@@ -97,7 +97,7 @@ const img =
 			</div>
 		</div>
 		<div
-			class="right gap-4 rounded-[2rem] text-white flex xl:flex-col flex-col items-center xl:justify-center xl:w-[49%] xl:h-full"
+			class="right md:w-full gap-4 rounded-[2rem] text-white flex xl:flex-col flex-col items-center xl:justify-center xl:w-[49%] xl:h-full"
 		>
 			<div
 				class="top xl:h-[35%] flex items-center justify-between flex-col w-full"
@@ -153,7 +153,7 @@ const img =
 				</div>
 			</div>
 			<div
-				class="bottom xl:h-[65%] flex flex-col justify-center items-center gap-2"
+				class="bottom md:w-full xl:h-[65%] flex flex-col justify-center items-center gap-2"
 			>
 				<div
 					class="h-[50%] w-full flex justify-center items-center flex-col xl:flex-row gap-1"
@@ -179,7 +179,7 @@ const img =
 					class="xl:h-[50%] w-full flex flex-col justify-center items-center gap-4 p-2 pb-4 border border-white rounded-[2rem]"
 				>
 					<div
-						class="rounded-[2rem] flex-1 flex justify-between items-start pt-4 px-4 bg-cover w-full py-[80px] bg-[url(https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)]"
+						class="rounded-[2rem] flex-1 flex justify-between items-start pt-4 px-4 bg-cover w-full xl:py-[10px] py-[80px] bg-[url(https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)]"
 					>
 						<div
 							class="px-6 font-bold text-white uppercase rounded-full bg-slate-950 tag w-max"
@@ -210,17 +210,6 @@ const img =
 			background: url('https://images.unsplash.com/photo-1680810094604-cd68532ebc56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80')
 				no-repeat center center;
 			background-size: cover;
-		}
-
-		.parent {
-			outline: red solid 2px;
-		}
-
-		@media only screen and (max-width: 640px) {
-			.parent {
-				// display: block !important;
-				outline: blue solid 2px;
-			}
 		}
 	</style>
 </Layout>
