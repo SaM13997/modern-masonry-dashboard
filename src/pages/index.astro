@@ -88,12 +88,12 @@ const img =
 			</div>
 		</div>
 		<div
-			class="right gap-10 rounded-[2rem] text-white flex xl:flex-col flex-col items-center xl:justify-center xl:w-[49%] xl:h-full"
+			class="right gap-4 rounded-[2rem] text-white flex xl:flex-col flex-col items-center xl:justify-center xl:w-[49%] xl:h-full"
 		>
 			<div
-				class="top xl:h-[35%] h-full w-full flex items-center justify-between flex-col"
+				class="top xl:h-[35%] flex items-center justify-between flex-col w-full"
 			>
-				<div class="flex items-center justify-center w-full">
+				<div class="nav flex items-center justify-center w-full">
 					<div class="p-[2px] border flex-1 border-white rounded-full">
 						<div
 							class="flex items-center justify-between p-1 px-2 border border-white rounded-full bg-slate-50/20"
@@ -118,21 +118,25 @@ const img =
 						</div>
 					</a>
 				</div>
-				<div class="border-b-2 border-white w-[97%]">Future Design</div>
-				<div class="w-[97%] flex items-center justify-between">
-					<p class="text-[4rem] font-semibold">Dashboard</p>
+				<div class="border-b-2 order-last border-white w-[97%]">
+					Future Design
+				</div>
+				<div
+					class="dashboard w-[97%] flex items-start xl:items-center justify-between flex-col-reverse xl:flex-row pt-6"
+				>
+					<p class="xl:text-[4rem] text-[2.5rem] font-semibold">Dashboard</p>
 					<div class="flex gap-1">
 						<div
-							class="flex items-center justify-center bg-blue-500 rounded-full w-14 h-14"
+							class="flex items-center justify-center bg-blue-500 rounded-full xl:w-14 xl:h-14 w-10 h-10"
 						>
 							<img
 								src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=761&q=80"
 								alt="avatar"
-								class="object-cover rounded-full w-14 h-14"
+								class="object-cover rounded-full xl:w-14 xl:h-14 w-10 h-10"
 							/>
 						</div>
 						<div
-							class="flex items-center justify-center bg-blue-500 rounded-full w-14 h-14"
+							class="flex items-center justify-center bg-blue-500 rounded-full xl:w-14 xl:h-14 w-10 h-10"
 						>
 							<Icon pack="mdi" name="video" class="w-6" />
 						</div>
@@ -140,9 +144,11 @@ const img =
 				</div>
 			</div>
 			<div
-				class="bottom xl:h-[65%] h-full w-full flex flex-col justify-center items-center gap-1"
+				class="bottom xl:h-[65%] flex flex-col justify-center items-center gap-2"
 			>
-				<div class="h-[50%] w-full flex justify-center items-center gap-1">
+				<div
+					class="h-[50%] w-full flex justify-center items-center flex-col xl:flex-row gap-1"
+				>
 					<Card
 						title="membership"
 						subtext="Online Users Availability"
@@ -161,10 +167,10 @@ const img =
 					/>
 				</div>
 				<div
-					class="h-[50%] w-full flex flex-col justify-center items-center gap-4 p-2 pb-4 border border-white rounded-[2rem]"
+					class="xl:h-[50%] w-full flex flex-col justify-center items-center gap-4 p-2 pb-4 border border-white rounded-[2rem]"
 				>
 					<div
-						class="rounded-[2rem] flex-1 flex justify-between items-start pt-4 px-4 bg-cover w-full bg-[url(https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)]"
+						class="rounded-[2rem] flex-1 flex justify-between items-start pt-4 px-4 bg-cover w-full py-[80px] bg-[url(https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)]"
 					>
 						<div
 							class="px-6 font-bold text-white uppercase rounded-full bg-slate-950 tag w-max"
